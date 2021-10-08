@@ -5,15 +5,8 @@ metadata:
   labels:
     app: pact-broker
 data:
-  PACT_BROKER_PORT_ENVIRONMENT_VARIABLE_NAME: PORT
-  # PACT_BROKER_DATABASE_URL_ENVIRONMENT_VARIABLE_NAME: DATABASE_URL
   # driver://username:password@host:port/database
-  # DATABASE_URL: "postgres://postgresadmin:admin123@postgres:5432/postgresdb"
-  PACT_BROKER_DATABASE_USERNAME: postgresadmin
-  PACT_BROKER_DATABASE_PASSWORD: admin123
-  PACT_BROKER_DATABASE_HOST: postgres
-  PACT_BROKER_DATABASE_NAME: postgres
-
+  PACT_BROKER_DATABASE_URL: "postgres://postgresadmin:admin123@postgres:5432/postgres"
   PACT_BROKER_DATABASE_CLEAN_ENABLED: "false"
   PACT_BROKER_DATABASE_CLEAN_CRON_SCHEDULE: "* * * * *"
   PACT_BROKER_DATABASE_CLEAN_DRY_RUN: "false"
@@ -22,7 +15,7 @@ data:
   # Keep all prod versions, AND the latest version for every pacticipant/tag, and all versions less than 30 days old
   PACT_BROKER_DATABASE_CLEAN_KEEP_VERSION_SELECTORS: '[{"latest": true, "tag": true}, {"max_age": 30}]'
   PACT_BROKER_DATABASE_CONNECT_MAX_RETRIES: "10"
-  PORT: '9393'
+  PORT: '9292'
   PACT_BROKER_LOG_LEVEL: INFO
   PACT_BROKER_SQL_LOG_LEVEL: DEBUG
   PACT_BROKER_BASIC_AUTH_USERNAME: "basic_auth_user"
