@@ -10,5 +10,5 @@ spec:
     app: pact-broker
   ports:
     - protocol: TCP
-      port: 9393
-      targetPort: 9393
+      port: 9292
+      targetPort: 9292

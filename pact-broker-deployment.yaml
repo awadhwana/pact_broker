@@ -19,7 +19,7 @@ spec:
           image: pactfoundation/pact-broker:2.86.0.1
           imagePullPolicy: "IfNotPresent"
           ports:
-            - containerPort: 9393
+            - containerPort: 9292
           envFrom:
             - configMapRef:
                 name: pact-broker-config
